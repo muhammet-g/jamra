@@ -44,7 +44,7 @@ function emptyInvoiceTemplate() {
 function invoiceItemTemplate(item) {
   return `
     <article class="invoice-item">
-      <img src="${item.image}" alt="${item.name}" loading="lazy" />
+      <img src="${item.image}" alt="${item.name}" loading="lazy" decoding="async" />
       <div class="invoice-item__content">
         <h3>${item.name}</h3>
         <span>${formatPrice(item.price)} / ${item.unit}</span>

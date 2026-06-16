@@ -35,7 +35,7 @@ function productCard(product, cartItem) {
   return `
     <article class="product-card ${!product.availability ? 'is-unavailable' : ''}" data-category="${product.category}">
       <div class="product-card__media">
-        <img src="${product.image}" alt="${product.name}" loading="lazy" />
+        <img src="${product.image}" alt="${product.name}" loading="lazy" decoding="async" />
         <div class="product-card__tags">${tags}</div>
       </div>
       <div class="product-card__body">

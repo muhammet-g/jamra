@@ -1,22 +1,22 @@
-import kebabImage from '../../assets/images/products/Grilled Meats/كباب لحم.png';
-import shishImage from '../../assets/images/products/Grilled Meats/شيش طاووق.png';
-import koftaImage from '../../assets/images/products/Grilled Meats/كفتة مشوية.png';
-import ribsImage from '../../assets/images/products/Grilled Meats/ريش غنم.png';
-import mixImage from '../../assets/images/products/Grilled Meats/نفر مشاوي مشكل.png';
-import halfChickenImage from '../../assets/images/products/Grilled Meats/نصف دجاجة مشوية.png';
-import familyImage from '../../assets/images/products/Grilled Meats/وجبة عائلية مشوية.png';
-import kebabSandwichImage from '../../assets/images/products/Sandwiches/سندويش كباب.png';
-import shishSandwichImage from '../../assets/images/products/Sandwiches/سندويش شيش طاووق.png';
-import hummusImage from '../../assets/images/products/Appetizers & Sides/حمص.png';
-import mutabalImage from '../../assets/images/products/Appetizers & Sides/متبل.png';
-import garlicImage from '../../assets/images/products/Appetizers & Sides/ثومية.png';
-import fattoushImage from '../../assets/images/products/Appetizers & Sides/سلطة فتوش.png';
-import friesImage from '../../assets/images/products/Appetizers & Sides/بطاطا مقلية.png';
-import ayranImage from '../../assets/images/products/Drinks/عيران.png';
-import colaImage from '../../assets/images/products/Drinks/كولا.png';
-import waterImage from '../../assets/images/products/Drinks/ماء.png';
-import orangeImage from '../../assets/images/products/Drinks/عصير برتقال طبيعي.png';
-import lemonMintImage from '../../assets/images/products/Drinks/ليمون مع نعناع.png';
+import kebabImage from '../../assets/images/products/Grilled Meats/كباب لحم.webp';
+import shishImage from '../../assets/images/products/Grilled Meats/شيش طاووق.webp';
+import koftaImage from '../../assets/images/products/Grilled Meats/كفتة مشوية.webp';
+import ribsImage from '../../assets/images/products/Grilled Meats/ريش غنم.webp';
+import mixImage from '../../assets/images/products/Grilled Meats/نفر مشاوي مشكل.webp';
+import halfChickenImage from '../../assets/images/products/Grilled Meats/نصف دجاجة مشوية.webp';
+import familyImage from '../../assets/images/products/Grilled Meats/وجبة عائلية مشوية.webp';
+import kebabSandwichImage from '../../assets/images/products/Sandwiches/سندويش كباب.webp';
+import shishSandwichImage from '../../assets/images/products/Sandwiches/سندويش شيش طاووق.webp';
+import hummusImage from '../../assets/images/products/Appetizers & Sides/حمص.webp';
+import mutabalImage from '../../assets/images/products/Appetizers & Sides/متبل.webp';
+import garlicImage from '../../assets/images/products/Appetizers & Sides/ثومية.webp';
+import fattoushImage from '../../assets/images/products/Appetizers & Sides/سلطة فتوش.webp';
+import friesImage from '../../assets/images/products/Appetizers & Sides/بطاطا مقلية.webp';
+import ayranImage from '../../assets/images/products/Drinks/عيران.webp';
+import colaImage from '../../assets/images/products/Drinks/كولا.webp';
+import waterImage from '../../assets/images/products/Drinks/ماء.webp';
+import orangeImage from '../../assets/images/products/Drinks/عصير برتقال طبيعي.webp';
+import lemonMintImage from '../../assets/images/products/Drinks/ليمون مع نعناع.webp';
 
 export const categories = [
   { id: 'all', name: 'الكل', icon: 'fa-border-all' },
