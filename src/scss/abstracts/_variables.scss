@@ -1,3 +1,4 @@
+// ألوان هوية جمر الأساسية كما طلبها العميل.
 $jamr-yellow: #fff44f;
 $jamr-amber: #ffb74d;
 $jamr-red: #92000a;
@@ -7,6 +8,7 @@ $jamr-charcoal: #181818;
 $jamr-cream: #fff8ef;
 
 :root {
+  // متغيرات CSS عامة لتسهيل إعادة استخدام الهوية داخل كل ملفات SCSS.
   --jamr-yellow: #{$jamr-yellow};
   --jamr-amber: #{$jamr-amber};
   --jamr-red: #{$jamr-red};

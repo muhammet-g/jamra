@@ -1,3 +1,4 @@
+// شريط التصنيفات أفقي ومناسب للجوال مع إخفاء شريط التمرير.
 .category-strip {
   display: flex;
   gap: 0.65rem;
@@ -10,6 +11,7 @@
   }
 }
 
+// زر التصنيف النشط يأخذ تدرج الجمر ليوضح الفلترة الحالية.
 .category-pill {
   display: inline-flex;
   flex: 0 0 auto;
@@ -37,6 +39,7 @@
   }
 }
 
+// شبكة المنتجات تبدأ بعمود واحد ثم تتوسع تدريجيًا حسب عرض الشاشة.
 .products-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -51,6 +54,7 @@
   }
 }
 
+// بطاقة المنتج الرئيسية: سطح داكن، ظل، وحركة رفع عند المرور.
 .product-card {
   overflow: hidden;
   color: var(--jamr-cream);
@@ -76,6 +80,7 @@
   }
 }
 
+// طبقة الصورة داخل البطاقة مع تدرج سفلي يحافظ على وضوح الوسوم.
 .product-card__media {
   position: relative;
   aspect-ratio: 1.24 / 1;
@@ -157,6 +162,44 @@
   font-size: 1.16rem;
 }
 
+// أزرار الكمية التي تظهر بدل زر "أضف" بعد اختيار المنتج.
+.product-card__quantity {
+  display: inline-grid;
+  grid-template-columns: 38px 40px 38px;
+  align-items: center;
+  overflow: hidden;
+  color: var(--jamr-cream);
+  background: rgba(255, 248, 239, 0.08);
+  border: 1px solid rgba(255, 183, 77, 0.28);
+  border-radius: 999px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+
+  button {
+    display: grid;
+    height: 40px;
+    place-items: center;
+    color: var(--jamr-black);
+    background: linear-gradient(135deg, var(--jamr-yellow), var(--jamr-amber));
+    border: 0;
+    transition:
+      filter 160ms ease,
+      transform 160ms ease;
+
+    &:hover {
+      filter: brightness(1.06);
+      transform: scale(1.04);
+    }
+  }
+
+  strong {
+    color: var(--jamr-cream);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 950;
+  }
+}
+
+// شبكة وبطاقات العروض المشتقة من قواعد الخصومات.
 .offers-grid {
   display: grid;
   gap: 0.85rem;

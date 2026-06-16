@@ -1,3 +1,4 @@
+// الزر الأساسي المشترك في الموقع مع حركة بسيطة عند التفاعل.
 .jamr-btn {
   --bs-btn-border-width: 0;
   display: inline-flex;
@@ -18,6 +19,7 @@
   }
 }
 
+// زر الدعوة الرئيسي بلون ناري واضح عالي التباين.
 .jamr-btn--primary {
   color: var(--jamr-black);
   background: linear-gradient(135deg, var(--jamr-yellow), var(--jamr-amber));
@@ -30,6 +32,7 @@
   }
 }
 
+// زر ثانوي شفاف للمناطق الداكنة دون سرقة الانتباه.
 .jamr-btn--ghost {
   color: var(--jamr-cream);
   background: rgba(255, 248, 239, 0.08);
@@ -42,6 +45,7 @@
   }
 }
 
+// زر العمليات الخطرة مثل مسح الفاتورة.
 .jamr-btn--danger {
   width: 100%;
   color: var(--jamr-cream);
@@ -60,6 +64,7 @@
   background: var(--jamr-amber);
 }
 
+// أزرار الأيقونات المستخدمة للفواتير والإغلاق والحذف.
 .icon-button,
 .invoice-button {
   position: relative;

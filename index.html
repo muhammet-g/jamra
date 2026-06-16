@@ -10,21 +10,17 @@
     <title>جمر | JAMR QR Menu</title>
   </head>
   <body>
+    <!-- شريط التنقل الخاص بسطح المكتب، يظهر فقط على الشاشات الكبيرة. -->
     <header class="site-header d-none d-lg-block">
       <nav class="navbar navbar-expand-lg jamr-navbar">
         <div class="container">
           <a class="brand-mark" href="#home" aria-label="جمر JAMR">
             <img src="/src/assets/images/logo/logo.png" alt="" />
-            <span>
-              <b class="brand-mark__arabic">جمر</b>
-              <b class="brand-mark__latin">JAMR</b>
-            </span>
           </a>
           <div class="navbar-nav align-items-center gap-2">
             <a class="nav-link" href="#home">الرئيسية</a>
             <a class="nav-link" href="#menu">المنيو</a>
             <a class="nav-link" href="#offers">العروض</a>
-            <a class="nav-link" href="#about">من نحن</a>
             <a class="nav-link" href="#contact">تواصل معنا</a>
             <button class="invoice-button js-open-invoice" type="button" aria-label="فتح الفاتورة">
               <i class="fa-solid fa-receipt"></i>
@@ -36,6 +32,7 @@
     </header>
 
     <main>
+      <!-- قسم البداية: يقدم الهوية والنداءات الأساسية للمنيو والفاتورة. -->
       <section class="hero-section section-anchor" id="home">
         <div class="container">
           <div class="hero-grid">
@@ -68,6 +65,7 @@
         </div>
       </section>
 
+      <!-- حاوية التصنيفات يتم تعبئتها ديناميكيًا من renderProducts.js. -->
       <section class="categories-section" aria-label="تصنيفات المنيو">
         <div class="container">
           <div class="section-heading">
@@ -78,6 +76,7 @@
         </div>
       </section>
 
+      <!-- شبكة المنتجات يتم رسمها من products.js ولا تحتوي كروت ثابتة داخل HTML. -->
       <section class="menu-section section-anchor" id="menu">
         <div class="container">
           <div class="section-heading section-heading--split">
@@ -91,6 +90,7 @@
         </div>
       </section>
 
+      <!-- بطاقات العروض تعرض نفس قواعد الخصم المستخدمة في حساب الفاتورة. -->
       <section class="offers-section section-anchor" id="offers">
         <div class="container">
           <div class="section-heading">
@@ -101,22 +101,7 @@
         </div>
       </section>
 
-      <section class="about-section section-anchor" id="about">
-        <div class="container">
-          <div class="about-panel">
-            <div>
-              <span class="eyebrow">من نحن</span>
-              <h2>هوية شواء عربية فاخرة بلا تعقيد.</h2>
-            </div>
-            <p>
-              جمر تجربة QR Menu مصممة لمطاعم المشاوي الراقية: واضحة، سريعة،
-              عالية التباين، وتضع الفاتورة أمام الزبون من أول اختيار حتى آخر
-              خصم.
-            </p>
-          </div>
-        </div>
-      </section>
-
+      <!-- معلومات التواصل الظاهرة للزبون في نهاية تجربة التصفح. -->
       <section class="contact-section section-anchor" id="contact">
         <div class="container">
           <div class="contact-grid">
@@ -134,6 +119,7 @@
       </section>
     </main>
 
+    <!-- درج الفاتورة: يبقى خارج main لأنه overlay ثابت فوق الصفحة. -->
     <aside class="invoice-drawer js-invoice-drawer" id="invoice" aria-label="الفاتورة">
       <div class="invoice-drawer__backdrop js-close-invoice"></div>
       <div class="invoice-panel">
@@ -159,6 +145,7 @@
       </div>
     </aside>
 
+    <!-- تنقل سفلي للجوال والتابلت لتسهيل استخدام المنيو بيد واحدة. -->
     <nav class="mobile-bottom-nav d-lg-none" aria-label="التنقل السفلي">
       <a href="#home" class="mobile-bottom-nav__item active">
         <i class="fa-solid fa-house"></i>
@@ -179,13 +166,15 @@
       </button>
     </nav>
 
+    <!-- الفوتر يستخدم اللوغو فقط حتى تبقى العلامة البصرية موحدة. -->
     <footer class="site-footer">
       <div class="container">
-        <span>جمر / JAMR</span>
+        <img class="footer-logo" src="/src/assets/images/logo/logo.png" alt="جمر JAMR" />
         <p>QR Menu prototype - لا يوجد دفع إلكتروني أو تسجيل دخول.</p>
       </div>
     </footer>
 
+    <!-- نقطة دخول Vite التي تستورد JavaScript وSCSS وكل الحزم. -->
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

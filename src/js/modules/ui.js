@@ -21,6 +21,7 @@ const badgeElements = document.querySelectorAll('.js-cart-badge');
 const offersGrid = document.querySelector('.js-offers-grid');
 const mobileNavItems = document.querySelectorAll('.mobile-bottom-nav__item');
 
+// تنسيق السعر بالريال مع أرقام عربية وبدون نص طويل مكرر.
 function formatPrice(value) {
   return `${value.toLocaleString('ar-SA', {
     minimumFractionDigits: Number.isInteger(value) ? 0 : 2,
@@ -28,6 +29,7 @@ function formatPrice(value) {
   })} ${currency}`;
 }
 
+// قالب يظهر عندما لا تحتوي الفاتورة على أي أصناف.
 function emptyInvoiceTemplate() {
   return `
     <div class="invoice-empty">
@@ -38,6 +40,7 @@ function emptyInvoiceTemplate() {
   `;
 }
 
+// قالب صنف داخل الفاتورة مع أزرار الزيادة والنقص والحذف.
 function invoiceItemTemplate(item) {
   return `
     <article class="invoice-item">
@@ -65,6 +68,7 @@ function invoiceItemTemplate(item) {
   `;
 }
 
+// إعادة رسم الفاتورة، الخصومات، المجاميع، وعدّاد السلة بعد كل تغيير.
 export function renderCart() {
   const items = getCartItems();
   const totals = getTotals();
@@ -96,6 +100,7 @@ export function renderCart() {
   });
 }
 
+// حركة قصيرة للـ badge حتى يلاحظ الزبون أن الفاتورة تغيرت.
 export function pulseCartBadge() {
   badgeElements.forEach((badge) => {
     badge.classList.remove('pulse');
@@ -103,16 +108,19 @@ export function pulseCartBadge() {
   });
 }
 
+// فتح درج الفاتورة ومنع تمرير الصفحة الخلفية.
 export function openInvoice() {
   invoiceDrawer.classList.add('is-open');
   document.body.classList.add('invoice-open');
 }
 
+// إغلاق درج الفاتورة وإرجاع تمرير الصفحة.
 export function closeInvoice() {
   invoiceDrawer.classList.remove('is-open');
   document.body.classList.remove('invoice-open');
 }
 
+// عرض بطاقات العروض من نفس قواعد الخصم المستخدمة في الحسابات.
 export function renderOffers() {
   offersGrid.innerHTML = discountRules
     .map(
@@ -127,7 +135,8 @@ export function renderOffers() {
     .join('');
 }
 
-export function bindCartControls() {
+// ربط أزرار الفاتورة، مع قبول callback لتحديث كروت المنتجات أيضًا.
+export function bindCartControls(onCartChange = renderCart) {
   invoiceItems.addEventListener('click', async (event) => {
     const control = event.target.closest('[data-cart-action]');
     if (!control) return;
@@ -137,13 +146,13 @@ export function bindCartControls() {
 
     if (control.dataset.cartAction === 'increase') {
       increaseQuantity(productId);
-      renderCart();
+      onCartChange();
       return;
     }
 
     if (control.dataset.cartAction === 'decrease') {
       decreaseQuantity(productId);
-      renderCart();
+      onCartChange();
       return;
     }
 
@@ -151,7 +160,7 @@ export function bindCartControls() {
       const result = await confirmRemoveItem(item.name);
       if (result.isConfirmed) {
         removeItem(productId);
-        renderCart();
+        onCartChange();
       }
     }
   });
@@ -162,11 +171,12 @@ export function bindCartControls() {
     const result = await confirmClearCart();
     if (result.isConfirmed) {
       clearCart();
-      renderCart();
+      onCartChange();
     }
   });
 }
 
+// ربط فتح وإغلاق درج الفاتورة من كل الأزرار والـ Escape.
 export function bindInvoiceDrawer() {
   document.querySelectorAll('.js-open-invoice').forEach((button) => {
     button.addEventListener('click', openInvoice);
@@ -181,8 +191,9 @@ export function bindInvoiceDrawer() {
   });
 }
 
+// تحديث حالة التنقل السفلي حسب القسم الظاهر على الشاشة.
 export function bindNavigationState() {
-  const sections = ['home', 'menu', 'offers', 'about', 'contact']
+  const sections = ['home', 'menu', 'offers', 'contact']
     .map((id) => document.getElementById(id))
     .filter(Boolean);
 

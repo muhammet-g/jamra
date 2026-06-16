@@ -1,3 +1,4 @@
+// النافبار العلوي الخاص بسطح المكتب مع خلفية زجاجية داكنة.
 .site-header {
   position: sticky;
   top: 0;
@@ -11,38 +12,21 @@
   min-height: 76px;
 }
 
+// شعار المطعم داخل النافبار.
 .brand-mark {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
   color: var(--jamr-cream);
   font-weight: 950;
 
   img {
-    width: 54px;
-    height: 54px;
+    width: 72px;
+    height: 58px;
     object-fit: cover;
     border: 1px solid rgba(255, 183, 77, 0.24);
-    border-radius: 50%;
+    border-radius: 16px;
     box-shadow: 0 0 26px rgba(255, 183, 77, 0.16);
   }
-
-  span {
-    display: grid;
-    gap: 0.02rem;
-  }
-}
-
-.brand-mark__arabic {
-  color: var(--jamr-yellow);
-  font-size: 1.45rem;
-  line-height: 1;
-}
-
-.brand-mark__latin {
-  color: var(--jamr-amber);
-  font-size: 0.9rem;
-  line-height: 1;
 }
 
 .nav-link {
@@ -55,10 +39,12 @@
   }
 }
 
+// ضبط نقاط التمرير حتى لا يغطي النافبار بداية الأقسام.
 .section-anchor {
   scroll-margin-top: 92px;
 }
 
+// الهيرو الرئيسي: مساحة أولى قوية بهوية داكنة ونارية.
 .hero-section {
   position: relative;
   min-height: 92vh;
@@ -81,6 +67,7 @@
   }
 }
 
+// شبكة الهيرو تتحول من عمود واحد إلى نص وصورة على سطح المكتب.
 .hero-grid {
   display: grid;
   gap: 2rem;
@@ -117,6 +104,7 @@
   margin-top: 1.4rem;
 }
 
+// صورة الطبق في الهيرو مع توهج لتعزيز هوية الشواء.
 .hero-plate {
   position: relative;
   display: grid;
@@ -165,10 +153,10 @@
   }
 }
 
+// مسافات الأقسام العامة في الصفحة.
 .categories-section,
 .menu-section,
 .offers-section,
-.about-section,
 .contact-section {
   padding: 2.7rem 0;
 
@@ -177,7 +165,7 @@
   }
 }
 
-.about-panel,
+// صندوق التواصل النهائي بتباين عالٍ وخلفية فاخرة.
 .contact-grid {
   display: grid;
   gap: 1.2rem;
@@ -223,17 +211,22 @@
   }
 }
 
+// الفوتر: يترك مساحة إضافية في الجوال بسبب التنقل السفلي الثابت.
 .site-footer {
   padding: 2rem 0 6.2rem;
   color: var(--jamr-muted);
   text-align: center;
   border-top: 1px solid var(--jamr-border);
 
-  span {
+  .footer-logo {
     display: block;
-    margin-bottom: 0.35rem;
-    color: var(--jamr-yellow);
-    font-weight: 950;
+    width: 118px;
+    height: 84px;
+    margin: 0 auto 0.65rem;
+    object-fit: cover;
+    border: 1px solid rgba(255, 183, 77, 0.22);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 183, 77, 0.12);
   }
 
   p {

@@ -7,6 +7,7 @@ const alertTheme = {
   cancelButtonColor: '#4A0040',
 };
 
+// تنبيه سريع بعد إضافة أي صنف للفاتورة.
 export function showAddSuccess() {
   return Swal.fire({
     ...alertTheme,
@@ -19,6 +20,7 @@ export function showAddSuccess() {
   });
 }
 
+// تأكيد قبل حذف صنف واحد حتى لا يضغط الزبون بالخطأ.
 export function confirmRemoveItem(itemName) {
   return Swal.fire({
     ...alertTheme,
@@ -31,6 +33,7 @@ export function confirmRemoveItem(itemName) {
   });
 }
 
+// تأكيد قبل مسح الفاتورة بالكامل لأن العملية لا يمكن التراجع عنها.
 export function confirmClearCart() {
   return Swal.fire({
     ...alertTheme,

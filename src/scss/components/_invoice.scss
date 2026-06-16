@@ -1,3 +1,4 @@
+// عداد الفاتورة يظهر فوق أيقونة السلة/الفاتورة.
 .cart-badge {
   position: absolute;
   top: -0.35rem;
@@ -23,6 +24,7 @@
   }
 }
 
+// درج الفاتورة مغلق افتراضيًا ويفتح بإضافة is-open من JavaScript.
 .invoice-drawer {
   position: fixed;
   inset: 0;
@@ -52,6 +54,7 @@
   transition: opacity 220ms ease;
 }
 
+// اللوحة المتحركة التي تحمل عناصر الفاتورة والمجاميع.
 .invoice-panel {
   position: absolute;
   inset: 0 0 0 auto;
@@ -93,6 +96,7 @@
   gap: 0.75rem;
 }
 
+// حالة الفاتورة الفارغة قبل أن يضيف الزبون أي صنف.
 .invoice-empty {
   display: grid;
   min-height: 210px;
@@ -115,6 +119,7 @@
   }
 }
 
+// صف صنف داخل الفاتورة مع الصورة والكمية والإجمالي الجزئي.
 .invoice-item {
   display: grid;
   grid-template-columns: 74px minmax(0, 1fr) auto;
@@ -158,6 +163,7 @@
   }
 }
 
+// أزرار تعديل الكمية داخل درج الفاتورة.
 .quantity-control {
   display: inline-grid;
   grid-template-columns: 32px 34px 32px;
@@ -182,6 +188,7 @@
   }
 }
 
+// صندوق الخصومات والمجاميع النهائية.
 .discount-list,
 .invoice-summary {
   display: grid;
@@ -224,6 +231,7 @@
   }
 }
 
+// حركة قصيرة تجعل تغير عدد الفاتورة واضحًا للزبون.
 @keyframes badgePulse {
   0%,
   100% {

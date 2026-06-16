@@ -1,3 +1,4 @@
+// التنقل السفلي ثابت للجوال والتابلت ليسهل الوصول للأقسام الأساسية.
 .mobile-bottom-nav {
   position: fixed;
   right: 0.75rem;
@@ -15,6 +16,7 @@
   backdrop-filter: blur(18px);
 }
 
+// عنصر التنقل الواحد، ويأخذ لونًا ناريًا عندما يكون نشطًا.
 .mobile-bottom-nav__item {
   position: relative;
   display: grid;

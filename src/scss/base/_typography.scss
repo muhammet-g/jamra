@@ -1,3 +1,4 @@
+// نمط العناوين الصغيرة المشتركة بين الأقسام والفاتورة.
 .eyebrow,
 .section-heading span,
 .invoice-panel__header span {
@@ -11,6 +12,7 @@
 }
 
 .section-heading {
+  // عنوان موحد للأقسام حتى تبقى المسافات والقراءة متناسقة.
   margin-bottom: 1.3rem;
 
   h2 {
@@ -30,6 +32,7 @@
 }
 
 .section-heading--split {
+  // يستخدم عندما نحتاج عنوانًا ووصفًا بجانبه على سطح المكتب.
   display: grid;
   gap: 0.65rem;
 
