@@ -1,0 +1,236 @@
+.cart-badge {
+  position: absolute;
+  top: -0.35rem;
+  right: -0.35rem;
+  display: grid;
+  min-width: 22px;
+  height: 22px;
+  place-items: center;
+  padding: 0 0.35rem;
+  color: var(--jamr-black);
+  background: var(--jamr-yellow);
+  border: 2px solid var(--jamr-black);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 950;
+
+  &.is-empty {
+    opacity: 0.55;
+  }
+
+  &.pulse {
+    animation: badgePulse 620ms ease;
+  }
+}
+
+.invoice-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  pointer-events: none;
+  visibility: hidden;
+
+  &.is-open {
+    pointer-events: auto;
+    visibility: visible;
+
+    .invoice-drawer__backdrop {
+      opacity: 1;
+    }
+
+    .invoice-panel {
+      transform: translateX(0);
+    }
+  }
+}
+
+.invoice-drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.58);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.invoice-panel {
+  position: absolute;
+  inset: 0 0 0 auto;
+  display: flex;
+  width: min(100%, 440px);
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at 80% 4%, rgba(255, 183, 77, 0.18), transparent 14rem),
+    var(--jamr-charcoal);
+  border-right: 1px solid var(--jamr-border);
+  box-shadow: -22px 0 70px rgba(0, 0, 0, 0.46);
+  transform: translateX(105%);
+  transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  @media (min-width: 576px) {
+    padding: 1.25rem;
+  }
+}
+
+.invoice-panel__header,
+.invoice-summary div,
+.discount-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.invoice-panel__header h2 {
+  margin: 0.25rem 0 0;
+  font-weight: 950;
+}
+
+.invoice-items {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.invoice-empty {
+  display: grid;
+  min-height: 210px;
+  place-items: center;
+  padding: 1.3rem;
+  color: var(--jamr-muted);
+  text-align: center;
+  background: rgba(255, 248, 239, 0.06);
+  border: 1px dashed rgba(255, 248, 239, 0.22);
+  border-radius: var(--jamr-radius);
+
+  i {
+    color: var(--jamr-amber);
+    font-size: 2rem;
+  }
+
+  strong {
+    color: var(--jamr-cream);
+    font-size: 1.05rem;
+  }
+}
+
+.invoice-item {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  padding: 0.65rem;
+  background: rgba(255, 248, 239, 0.07);
+  border: 1px solid var(--jamr-border);
+  border-radius: 18px;
+
+  img {
+    width: 74px;
+    height: 74px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+}
+
+.invoice-item__content {
+  min-width: 0;
+
+  h3 {
+    margin: 0 0 0.25rem;
+    font-size: 0.98rem;
+    font-weight: 900;
+  }
+
+  span {
+    color: var(--jamr-muted);
+    font-size: 0.82rem;
+  }
+}
+
+.invoice-item__aside {
+  display: grid;
+  justify-items: end;
+  gap: 0.45rem;
+
+  strong {
+    color: var(--jamr-yellow);
+    white-space: nowrap;
+  }
+}
+
+.quantity-control {
+  display: inline-grid;
+  grid-template-columns: 32px 34px 32px;
+  align-items: center;
+  margin-top: 0.55rem;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid var(--jamr-border);
+  border-radius: 999px;
+
+  button {
+    display: grid;
+    height: 32px;
+    place-items: center;
+    color: var(--jamr-cream);
+    background: transparent;
+    border: 0;
+  }
+
+  strong {
+    text-align: center;
+  }
+}
+
+.discount-list,
+.invoice-summary {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.85rem;
+  background: rgba(255, 248, 239, 0.06);
+  border: 1px solid var(--jamr-border);
+  border-radius: 18px;
+}
+
+.discount-row {
+  color: #b9ffbc;
+  font-size: 0.9rem;
+}
+
+.discount-row--muted {
+  display: block;
+  color: var(--jamr-muted);
+}
+
+.invoice-summary {
+  div {
+    color: var(--jamr-muted);
+  }
+
+  strong {
+    color: var(--jamr-cream);
+  }
+}
+
+.invoice-summary__total {
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--jamr-border);
+
+  span,
+  strong {
+    color: var(--jamr-yellow);
+    font-size: 1.18rem;
+    font-weight: 950;
+  }
+}
+
+@keyframes badgePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.28);
+    box-shadow: 0 0 0 9px rgba(255, 244, 79, 0.15);
+  }
+}

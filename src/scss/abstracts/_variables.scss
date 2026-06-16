@@ -1,0 +1,22 @@
+$jamr-yellow: #fff44f;
+$jamr-amber: #ffb74d;
+$jamr-red: #92000a;
+$jamr-plum: #4a0040;
+$jamr-black: #111111;
+$jamr-charcoal: #181818;
+$jamr-cream: #fff8ef;
+
+:root {
+  --jamr-yellow: #{$jamr-yellow};
+  --jamr-amber: #{$jamr-amber};
+  --jamr-red: #{$jamr-red};
+  --jamr-plum: #{$jamr-plum};
+  --jamr-black: #{$jamr-black};
+  --jamr-charcoal: #{$jamr-charcoal};
+  --jamr-cream: #{$jamr-cream};
+  --jamr-muted: rgba(255, 248, 239, 0.72);
+  --jamr-border: rgba(255, 248, 239, 0.13);
+  --jamr-glow: 0 0 34px rgba(255, 183, 77, 0.32);
+  --jamr-shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+  --jamr-radius: 22px;
+}

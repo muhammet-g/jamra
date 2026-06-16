@@ -1,0 +1,37 @@
+export const discountRules = [
+  {
+    id: 'two-whole-chickens',
+    title: 'خصم دجاجتين مشويتين',
+    description: 'اطلب 2 فروج مشوي كامل واحصل على خصم 10%',
+    type: 'itemQuantity',
+    productId: 'whole-grilled-chicken',
+    minQuantity: 2,
+    percentage: 10,
+  },
+  {
+    id: 'three-kg-shish',
+    title: 'خصم 3 كيلو شيش طاووق',
+    description: 'اطلب 3 كيلو شيش طاووق واحصل على خصم 15%',
+    type: 'itemQuantity',
+    productId: 'kilo-shish-tawook',
+    minQuantity: 3,
+    percentage: 15,
+  },
+  {
+    id: 'three-kg-kebab',
+    title: 'خصم 3 كيلو كباب',
+    description: 'اطلب 3 كيلو كباب واحصل على خصم 12%',
+    type: 'itemQuantity',
+    productId: 'kilo-kebab',
+    minQuantity: 3,
+    percentage: 12,
+  },
+  {
+    id: 'subtotal-over-250',
+    title: 'خصم الفاتورة الكبيرة',
+    description: 'خصم 5% عند تجاوز الفاتورة 250 ﷼',
+    type: 'subtotal',
+    minSubtotal: 250,
+    percentage: 5,
+  },
+];

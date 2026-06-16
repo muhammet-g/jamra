@@ -1,0 +1,40 @@
+.eyebrow,
+.section-heading span,
+.invoice-panel__header span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--jamr-amber);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.section-heading {
+  margin-bottom: 1.3rem;
+
+  h2 {
+    margin: 0.4rem 0 0;
+    color: var(--jamr-cream);
+    font-size: clamp(1.45rem, 4vw, 2.25rem);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  p {
+    max-width: 34rem;
+    margin: 0.75rem 0 0;
+    color: var(--jamr-muted);
+    line-height: 1.85;
+  }
+}
+
+.section-heading--split {
+  display: grid;
+  gap: 0.65rem;
+
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+}

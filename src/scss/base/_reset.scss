@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  direction: rtl;
+  font-family:
+    "Tajawal", "Cairo", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  color: var(--jamr-cream);
+  background:
+    radial-gradient(circle at 84% 0%, rgba(146, 0, 10, 0.42), transparent 34rem),
+    radial-gradient(circle at 10% 16%, rgba(255, 183, 77, 0.13), transparent 24rem),
+    linear-gradient(145deg, #0b0b0b 0%, #171111 44%, #100810 100%);
+}
+
+body.invoice-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  color: var(--jamr-black);
+  background: var(--jamr-yellow);
+}

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="منيو QR لمطعم جمر JAMR للمشاوي العربية الفاخرة."
+    />
+    <title>جمر | JAMR QR Menu</title>
+  </head>
+  <body>
+    <header class="site-header d-none d-lg-block">
+      <nav class="navbar navbar-expand-lg jamr-navbar">
+        <div class="container">
+          <a class="brand-mark" href="#home" aria-label="جمر JAMR">
+            <img src="/src/assets/images/logo/logo.png" alt="" />
+            <span>
+              <b class="brand-mark__arabic">جمر</b>
+              <b class="brand-mark__latin">JAMR</b>
+            </span>
+          </a>
+          <div class="navbar-nav align-items-center gap-2">
+            <a class="nav-link" href="#home">الرئيسية</a>
+            <a class="nav-link" href="#menu">المنيو</a>
+            <a class="nav-link" href="#offers">العروض</a>
+            <a class="nav-link" href="#about">من نحن</a>
+            <a class="nav-link" href="#contact">تواصل معنا</a>
+            <button class="invoice-button js-open-invoice" type="button" aria-label="فتح الفاتورة">
+              <i class="fa-solid fa-receipt"></i>
+              <span class="cart-badge js-cart-badge">0</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section section-anchor" id="home">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow">مشاوي على جمر هادئ</span>
+              <h1>جمر يقدّم نكهة الشواء العربية كما يجب أن تكون.</h1>
+              <p>
+                اختر وجبتك، أضفها إلى الفاتورة، وشاهد الخصومات والمجموع النهائي
+                مباشرة من جوالك.
+              </p>
+              <div class="hero-actions">
+                <a href="#menu" class="btn jamr-btn jamr-btn--primary">
+                  تصفح المنيو
+                  <i class="fa-solid fa-fire-flame-curved"></i>
+                </a>
+                <button class="btn jamr-btn jamr-btn--ghost js-open-invoice" type="button">
+                  عرض الفاتورة
+                </button>
+              </div>
+            </div>
+            <div class="hero-plate" aria-hidden="true">
+              <div class="hero-plate__glow"></div>
+              <img src="/src/assets/images/products/Grilled Meats/نفر مشاوي مشكل.png" alt="" />
+              <div class="hero-plate__note">
+                <strong>خصومات تلقائية</strong>
+                <span>على الكيلو والطلبات الكبيرة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories-section" aria-label="تصنيفات المنيو">
+        <div class="container">
+          <div class="section-heading">
+            <span>تصنيفات مختارة</span>
+            <h2>كل ما يحتاجه سفرك من الجمر</h2>
+          </div>
+          <div class="category-strip js-category-strip"></div>
+        </div>
+      </section>
+
+      <section class="menu-section section-anchor" id="menu">
+        <div class="container">
+          <div class="section-heading section-heading--split">
+            <div>
+              <span>المنيو</span>
+              <h2>مشاوي، مقبلات، سندويشات ومشروبات</h2>
+            </div>
+            <p>كل منتج يضاف إلى فاتورتك المحلية فقط، دون دفع أو تسجيل دخول.</p>
+          </div>
+          <div class="products-grid js-products-grid"></div>
+        </div>
+      </section>
+
+      <section class="offers-section section-anchor" id="offers">
+        <div class="container">
+          <div class="section-heading">
+            <span>العروض</span>
+            <h2>خصومات تظهر تلقائيًا في الفاتورة</h2>
+          </div>
+          <div class="offers-grid js-offers-grid"></div>
+        </div>
+      </section>
+
+      <section class="about-section section-anchor" id="about">
+        <div class="container">
+          <div class="about-panel">
+            <div>
+              <span class="eyebrow">من نحن</span>
+              <h2>هوية شواء عربية فاخرة بلا تعقيد.</h2>
+            </div>
+            <p>
+              جمر تجربة QR Menu مصممة لمطاعم المشاوي الراقية: واضحة، سريعة،
+              عالية التباين، وتضع الفاتورة أمام الزبون من أول اختيار حتى آخر
+              خصم.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section-anchor" id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <div>
+              <span class="eyebrow">تواصل معنا</span>
+              <h2>جاهزون لخدمة سفرتك.</h2>
+            </div>
+            <div class="contact-list">
+              <span><i class="fa-solid fa-location-dot"></i> الرياض، المملكة العربية السعودية</span>
+              <span><i class="fa-solid fa-phone"></i> 050 000 0000</span>
+              <span><i class="fa-solid fa-clock"></i> يوميًا 12 ظهرًا - 1 بعد منتصف الليل</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="invoice-drawer js-invoice-drawer" id="invoice" aria-label="الفاتورة">
+      <div class="invoice-drawer__backdrop js-close-invoice"></div>
+      <div class="invoice-panel">
+        <div class="invoice-panel__header">
+          <div>
+            <span>فاتورتك</span>
+            <h2>ملخص الطلب</h2>
+          </div>
+          <button class="icon-button js-close-invoice" type="button" aria-label="إغلاق الفاتورة">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="invoice-items js-invoice-items"></div>
+        <div class="discount-list js-discount-list"></div>
+        <div class="invoice-summary">
+          <div><span>المجموع الفرعي</span><strong class="js-subtotal">0</strong></div>
+          <div><span>الخصومات</span><strong class="js-discount-total">0</strong></div>
+          <div class="invoice-summary__total"><span>الإجمالي</span><strong class="js-total">0</strong></div>
+        </div>
+        <button class="btn jamr-btn jamr-btn--danger js-clear-cart" type="button">
+          مسح الفاتورة
+        </button>
+      </div>
+    </aside>
+
+    <nav class="mobile-bottom-nav d-lg-none" aria-label="التنقل السفلي">
+      <a href="#home" class="mobile-bottom-nav__item active">
+        <i class="fa-solid fa-house"></i>
+        <span>الرئيسية</span>
+      </a>
+      <a href="#menu" class="mobile-bottom-nav__item">
+        <i class="fa-solid fa-utensils"></i>
+        <span>المنيو</span>
+      </a>
+      <a href="#offers" class="mobile-bottom-nav__item">
+        <i class="fa-solid fa-tags"></i>
+        <span>العروض</span>
+      </a>
+      <button class="mobile-bottom-nav__item js-open-invoice" type="button">
+        <i class="fa-solid fa-receipt"></i>
+        <span>الفاتورة</span>
+        <b class="cart-badge js-cart-badge">0</b>
+      </button>
+    </nav>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>جمر / JAMR</span>
+        <p>QR Menu prototype - لا يوجد دفع إلكتروني أو تسجيل دخول.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
